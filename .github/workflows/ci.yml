@@ -15,5 +15,14 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Confirm requests is installed
+        run: |
+          pip list | grep requests || echo "Requests NOT installed"
+
       - name: Run Python script
-        run: python Competations.py
+        run: python myscript.pyy
