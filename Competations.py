@@ -60,6 +60,7 @@ schema = {
     "apiCallRequestTime"
   ]
 }
+print(schema)
 try:
     validate(instance=json_data, schema=schema)
     print("✅ Schema is valid")
